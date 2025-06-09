@@ -10,17 +10,19 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom right, #1e1e2f, #0f0f1f);
+            color: #ffffff;
             text-align: center;
         }
 
         /* Header */
         header {
-            background: linear-gradient(90deg, #007bff, #0056b3);
+            background: linear-gradient(90deg, #00d4ff, #007bff);
             color: white;
             padding: 20px;
             font-size: 28px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         /* Container */
@@ -28,9 +30,9 @@
             width: 80%;
             margin: auto;
             padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            background: #2b2b3d;
+            box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
             margin-top: 20px;
         }
 
@@ -43,15 +45,17 @@
         }
 
         .skill-card {
-            background: #ffffff;
+            background: #3a3a50;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 12px rgba(0, 255, 255, 0.1);
             padding: 15px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .skill-card:hover {
             transform: scale(1.05);
+            box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.3);
         }
 
         .skill-card img {
@@ -63,78 +67,148 @@
         .skill-card h3 {
             margin-top: 10px;
             font-size: 20px;
-            color: #007bff;
+            color: #00d4ff;
         }
 
         /* Footer */
         footer {
             margin-top: 20px;
-            padding: 10px;
-            background: #007bff;
+            padding: 15px;
+            background: #1e1e2f;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 100px;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: #2e2e40;
             color: white;
+            margin: auto;
+            padding: 20px;
+            width: 70%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            text-align: left;
+        }
+
+        .close {
+            color: #ff4d4d;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 width: 95%;
+                }
+
+            .modal-content {
+                width: 90%;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>Football Training Program</header>
+<header>Football Training Program</header>
 
-    <div class="container">
-        <h2>Introduction</h2>
-        <p>This football training program helps players improve their technical skills, fitness, and tactical awareness.</p>
+<div class="container">
+    <h2>Introduction</h2>
+    <p>This football training program helps players improve their technical skills, fitness, and tactical awareness.</p>
 
-        <h2>Training Image</h2>
-        <img src="https://universidadeuropea.com/resources/media/images/football_training.width-1200.format-webp.webp" alt="Football training session" width="80%" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+    <h2>Training Image</h2>
+    <img src="https://universidadeuropea.com/resources/media/images/football_training.width-1200.format-webp.webp"
+         alt="Football training session"
+         style="width: 80%; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.2); margin-top: 10px;">
 
-        <h2>Essential Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="https://www.playermaker.com/wp-content/uploads/2024/09/soccer-dribbling-skill-moves-1024x683.jpg" alt="Dribbling skills">
-                <h3>⚽ Dribbling Skills</h3>
-                <p>Improve ball control and maneuvering under pressure.</p>
-            </div>
-
-            <div class="skill-card">
-                <img src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20-%202021/images/Passing101.jpeg?width=600&name=Passing101.jpeg" alt="Passing practice">
-                <h3>🎯 Passing Practice</h3>
-                <p>Enhance passing accuracy and teamwork coordination.</p>
-            </div>
-
-            <div class="skill-card">
-                <img src="https://www.pendlesportswear.co.uk/blog/wp-content/uploads/Shooting.jpg" alt="Shooting techniques">
-                <h3>🥅 Shooting Techniques</h3>
-                <p>Learn different shooting techniques for better scoring.</p>
-            </div>
-
-            <div class="skill-card">
-                <img src="https://i0.wp.com/strikerless.com/wp-content/uploads/2022/05/tacc.png?ssl=1" alt="Defensive tactics">
-                <h3>🛡️ Defensive Tactics</h3>
-                <p>Develop defensive skills to stop opponents effectively.</p>
-            </div>
-
-            <div class="skill-card">
-                <img src="https://img.redbull.com/images/c_crop,w_4752,h_2376,x_0,y_331/c_auto,w_1200,h_630/f_auto,q_auto/redbullcom/2020/12/22/ydznqbpifp9am3mb9hsw/chennaiyin-football-club-training-running-drills" alt="Fitness training">
-                <h3>🏋️ Fitness Training</h3>
-                <p>Boost stamina, speed, and overall physical fitness.</p>
-            </div>
-
-            <div class="skill-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDaSYrfTsg2ZmcEQB1pdWy7c_KbIIJ7junw&s" alt="Teamwork on the field">
-                <h3>🤝 Teamwork & Strategy</h3>
-                <p>Understand tactical formations and play as a team.</p>
-            </div>
+    <h2>Essential Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card" onclick="openModal('Dribbling Skills', 'This drill involves cone weaves, 1v1 situations, and close ball control techniques to improve agility under pressure.')">
+            <img src="https://www.playermaker.com/wp-content/uploads/2024/09/soccer-dribbling-skill-moves-1024x683.jpg" alt="Dribbling skills">
+            <h3>⚽ Dribbling Skills</h3>
+            <p>Improve ball control and maneuvering under pressure.</p>
         </div>
 
-        <h2>Training Tips</h2>
-        <p>To become a great player, practice consistently, maintain a healthy diet, and learn from professional players.</p>
+        <div class="skill-card" onclick="openModal('Passing Practice', 'Focus on short and long-range passing using both feet. Includes triangle passing drills, wall passes, and accuracy games.')">
+            <img src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20-%202021/images/Passing101.jpeg?width=600&name=Passing101.jpeg" alt="Passing practice">
+            <h3>🎯 Passing Practice</h3>
+            <p>Enhance passing accuracy and teamwork coordination.</p>
+        </div>
+
+        <div class="skill-card" onclick="openModal('Shooting Techniques', 'Learn inside-foot shots, volleys, chip shots, and one-touch shooting drills to finish under pressure.')">
+            <img src="https://www.pendlesportswear.co.uk/blog/wp-content/uploads/Shooting.jpg" alt="Shooting techniques">
+            <h3>🥅 Shooting Techniques</h3>
+            <p>Learn different shooting techniques for better scoring.</p>
+        </div>
+
+        <div class="skill-card" onclick="openModal('Defensive Tactics', 'Train in zonal marking, pressing, and recovery runs. Learn when to intercept and when to tackle.')">
+            <img src="https://i0.wp.com/strikerless.com/wp-content/uploads/2022/05/tacc.png?ssl=1" alt="Defensive tactics">
+            <h3>🛡️ Defensive Tactics</h3>
+            <p>Develop defensive skills to stop opponents effectively.</p>
+        </div>
+
+        <div class="skill-card" onclick="openModal('Fitness Training', 'Includes sprints, endurance runs, interval training, and agility ladders to build stamina and speed.')">
+            <img src="https://img.redbull.com/images/c_crop,w_4752,h_2376,x_0,y_331/c_auto,w_1200,h_630/f_auto,q_auto/redbullcom/2020/12/22/ydznqbpifp9am3mb9hsw/chennaiyin-football-club-training-running-drills" alt="Fitness training">
+            <h3>🏋️ Fitness Training</h3>
+            <p>Boost stamina, speed, and overall physical fitness.</p>
+        </div>
+
+        <div class="skill-card" onclick="openModal('Teamwork & Strategy', 'Study formations like 4-4-2, 4-3-3, and tiki-taka style. Practice communication, spacing, and support runs.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDaSYrfTsg2ZmcEQB1pdWy7c_KbIIJ7junw&s" alt="Teamwork on the field">
+            <h3>🤝 Teamwork & Strategy</h3>
+            <p>Understand tactical formations and play as a team.</p>
+        </div>
     </div>
+
+    <h2>Training Tips</h2>
+    <p>To become a great player, practice consistently, maintain a healthy diet, and learn from professional players.</p>
+</div>
+
+<!-- Modal Structure -->
+<div id="skillModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Football Training Program. All rights reserved.
+</footer>
+
+<!-- JavaScript for Modal -->
+<script>
+    function openModal(title, description) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDescription").innerText = description;
+        document.getElementById("skillModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("skillModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById("skillModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
 
 </body>
 </html>
